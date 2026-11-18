@@ -1,4 +1,6 @@
-const API_URL = "https://dev.to";
+const DOMINIO = "https://dev.to";
+const RUTA = "/api/articles?per_page=9";
+const API_URL = DOMINIO + RUTA;
 
 const contenedorNoticias = document.getElementById("contenedor-noticias");
 const mensajeEstado = document.getElementById("mensaje-estado");
@@ -12,6 +14,12 @@ async function obtenerNoticias() {
 
         if (!respuesta.ok) {
             throw new Error(`Error HTTP: ${respuesta.status}`);
+        }
+
+        // Validación sugerida para confirmar que la respuesta sea JSON real
+        const tipoContenido = respuesta.headers.get("content-type");
+        if (!tipoContenido || !tipoContenido.includes("application/json")) {
+            throw new Error("El servidor no devolvió un formato JSON válido.");
         }
 
         const listaNoticias = await respuesta.json();
