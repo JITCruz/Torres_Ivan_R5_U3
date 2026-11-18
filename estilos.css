@@ -1,0 +1,136 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #2c3e50;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1a252f;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 28px;
+}
+
+header p {
+    margin: 0 0 20px 0;
+    color: #bdc3c7;
+}
+
+#btn-refrescar {
+    background-color: #2980b9;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#btn-refrescar:hover {
+    background-color: #3498db;
+}
+
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.cuadricula-noticias {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta-noticia {
+    background-color: #ffffff;
+    border: 1px solid #dce1e7;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.tarjeta-noticia img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.contenido-noticia {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.titulo-noticia {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1a252f;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.titulo-noticia:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+.resumen-noticia {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555555;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.fecha-noticia {
+    font-size: 12px;
+    color: #7f8c8d;
+    border-top: 1px solid #ecf0f1;
+    padding-top: 10px;
+}
+
+.mensaje-alerta {
+    background-color: #fceae8;
+    color: #c0392b;
+    border: 1px solid #e74c3c;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.mensaje-carga {
+    background-color: #eaf2f8;
+    color: #2980b9;
+    border: 1px solid #3498db;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.estado-oculto {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #7f8c8d;
+    font-size: 14px;
+}

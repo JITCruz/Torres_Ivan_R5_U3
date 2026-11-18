@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lector de Noticias en Tiempo Real</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>Lector de Noticias Tecnológicas y Científicas</h1>
+        <p>Noticias actualizadas en tiempo real mediante Fetch y JSON</p>
+        <button id="btn-refrescar" onclick="obtenerNoticias()">🔄 Actualizar noticias</button>
+    </header>
+
+    <main>
+        <!-- Área para mensajes de estado o errores -->
+        <div id="mensaje-estado" class="estado-oculto"></div>
+
+        <!-- Área específica donde se mostrarán las noticias -->
+        <section id="contenedor-noticias" class="cuadricula-noticias"></section>
+    </main>
+
+    <footer>
+        <p>Desarrollo Web - Reto 5 UVEG</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
